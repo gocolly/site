@@ -1,0 +1,36 @@
+{{ define "main" }}
+{{ $currentPage := . }}
+<p></p>
+<div class="ui stackable grid">
+  <div class="ui row">
+  <div class="four wide column">
+    <div class="ui large vertical fluid tabular menu">
+      {{ range .Site.Menus.docs.ByWeight }}
+      <div class="item">
+        <div class="header">{{ .Name }}</div>
+        {{ if .HasChildren }}
+        <div class="menu">
+          {{ range .Children.ByWeight }}
+          <a class="item{{if $currentPage.IsMenuCurrent "docs" . }} active{{ end }}" href="{{ .URL }}">{{ humanize .Name }}</a>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  <div class="twelve wide column">
+    <div class="ui vertical stripe segment">
+      <div class="ui stackable grid container">
+        <div class="row">
+          <div class="sixteen wide column">
+            <h2>{{ with .Params.title }}{{ humanize . }}{{ end }}</h2>
+            <div class="sixteen wide column">{{ .Content }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+{{ end }}

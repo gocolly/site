@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="no-js" lang="{{ with $.Site.LanguageCode }}{{ . }}{{ else }}en-us{{ end }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+     {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
+    <title>{{ block "title" . }}{{ .Site.Title }} | {{ .Site.Params.description }}{{ end }}</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+     {{ .Hugo.Generator }}
+
+    <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+
+    <link href='{{ "css/semantic.min.css" | absURL }}' rel='stylesheet' type="text/css" />
+<style>
+body { display: flex; min-height: 100vh; flex-direction: column; }
+.content { flex: 1; }
+pre { padding: 8px; overflow: auto !important; }
+#menu { padding: 0 20px; }
+.landing { min-height: 300px; }
+.landing h2 { font-size: 1.8em !important; }
+.landing h1, .landing h2, .landing h3 { font-weight: 100 !important; }
+table { border-collapse: collapse; }
+th { text-align: left; }
+td, th { border: 1px solid #888888; padding: 8px; }
+</style>
+  </head>
+  <body>
+    <div class="ui inverted vertical masthead center aligned segment" id="menu">
+      <div class="ui large secondary inverted menu">
+        <a class="item" href="{{ "" | absURL }}"><b>Colly</b></a>
+        {{ range .Site.Menus.main.ByWeight }}
+        <a class="item" href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+        <div class="right item">
+          <a class="item" href="https://godoc.org/github.com/asciimoo/colly">GoDoc</a>
+          <a class="ui secondary icon button" href="https://github.com/asciimoo/colly"><i class="github big icon"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+    {{ block "main" . }}{{ end }}
+    </div>
+
+    {{ block "footer" . }}{{ partial "footer.html" . }}{{ end }}
+  </body>
+</html>

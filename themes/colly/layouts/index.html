@@ -1,0 +1,41 @@
+{{ define "main" }}
+<div class="ui inverted vertical masthead center aligned segment">
+  <div class="ui text container landing">
+    <img class="ui centered medium image" src="{{ "logo.png" | absURL }}">
+    <h2>{{ .Site.Params.Description }}</h2>
+    <a class="github-button" href="https://github.com/asciimoo/colly" data-size="large" data-show-count="true" aria-label="Star asciimoo/colly on GitHub">Star</a>
+  </div>
+</div>
+<div class="ui vertical stripe segment">
+  <div class="ui middle aligned stackable grid container">
+    <div class="row">
+      <div class="eight wide column">
+        <h2 class="ui header">Colly provides a clean interface to write any kind of crawler/scraper/spider</h2>
+        <p>With Colly you can easily extract structured data from websites, which can be used for a wide range of applications, like data mining, data processing or archiving.</p>
+        <h2 class="ui header">Features</h2>
+        <ul>
+          <li>Clean API</li>
+          <li>Fast (&gt;1k request/sec on a single core)</li>
+          <li>Manages request delays and maximum concurrency per domain</li>
+          <li>Automatic cookie and session handling</li>
+          <li>Sync/async/parallel scraping</li>
+          <li>Caching</li>
+          <li>Automatic encoding of non-unicode responses</li>
+          <li>Robots.txt support</li>
+        </ul>
+      </div>
+      <div class="eight wide column">
+        <img src="{{ "collycode.png" | absURL }}" class="ui huge bordered rounded image">
+      </div>
+    </div>
+    <!--
+    <div class="row">
+      <div class="center aligned column">
+        <a class="ui huge button">Check Them Out</a>
+      </div>
+    </div>
+    -->
+  </div>
+</div>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+{{ end }}

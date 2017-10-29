@@ -1,0 +1,45 @@
+baseURL = "http://go-colly.org/"
+languageCode = "en-us"
+title = "Colly"
+theme = "colly"
+DefaultContentLanguage = "en"
+SectionPagesMenu = "main"
+enableRobotsTXT = false
+pygmentsCodeFences = true
+#pygmentsOptions = "linenos=true"
+
+[params]
+  title = "Colly"
+  description = "Fast and Elegant Scraping Framework for Gophers"
+  github = "https://github.com/asciimoo/colly"
+
+[[menu.main]]
+  name = "Docs"
+  url = "/docs/"
+  weight = 10
+  identifier = "docs"
+
+[[menu.main]]
+  name = "Datasets"
+  url = "/datasets/"
+  weight = 20
+  identifier = "datasets"
+
+
+[[menu.docs]]
+  name = "Introduction"
+  url = "/docs/introduction/"
+  weight = 10
+  identifier = "introduction"
+
+[[menu.docs]]
+  name = "Examples"
+  url = "/docs/examples/"
+  weight = 20
+  identifier = "examples"
+
+[[menu.docs]]
+  name = "Real life examples"
+  url = "/docs/real_examples/"
+  weight = 20
+  identifier = "real_examples"
