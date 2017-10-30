@@ -32,7 +32,7 @@ c := colly.NewCollector()
 ## Callbacks
 
 
-You can attach different type of callback functions to a `Collector` to control or a collecting job or retrieve information. Check out the [related section](https://godoc.org/github.com/asciimoo/colly#Collector.OnError) in the package documentation.
+You can attach different type of callback functions to a `Collector` to control a collecting job or retrieve information. Check out the [related section](https://godoc.org/github.com/asciimoo/colly#Collector.OnError) in the package documentation.
 
 
 ### Add callbacks to a `Collector`
