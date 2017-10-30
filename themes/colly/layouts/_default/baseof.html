@@ -8,6 +8,12 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
+    <meta content="{{ "logo.png" | absURL }}" property="og:image" />
+    <meta content="{{ .Site.Params.Title }}" property="og:title" />
+    <meta content="{{ .Site.Params.Description }}" property="og:description" />
+    <meta name="description" content="{{ .Site.Params.Description }}">
+
+
     <meta name="viewport" content="width=device-width,minimum-scale=1">
      {{ .Hugo.Generator }}
 
@@ -30,7 +36,7 @@ td, th { border: 1px solid #888888; padding: 8px; }
   <body>
     <div class="ui inverted vertical masthead center aligned segment" id="menu">
       <div class="ui large secondary inverted menu">
-        <a class="item" href="{{ "" | absURL }}"><b>Colly</b></a>
+        <a class="item" href="{{ "" | absURL }}"><b>{{ .Site.Params.Title }}</b></a>
         {{ range .Site.Menus.main.ByWeight }}
         <a class="item" href="{{ .URL }}">{{ .Name }}</a>
         {{ end }}
