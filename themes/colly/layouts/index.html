@@ -25,9 +25,22 @@
         </ul>
       </div>
       <div class="eight wide column">
-        <img src="{{ "collycode.png" | absURL }}" class="ui huge bordered rounded image">
+        {{ highlight `func main() {
+	c := colly.NewCollector()
+
+	// Find and visit all links
+	c.OnHTML("a", func(e *colly.HTMLElement) {
+		e.Request.Visit(e.Attr("href"))
+	})
+
+	c.OnRequest(func(r *colly.Request) {
+		fmt.Println("Visiting", r.URL)
+	})
+
+	c.Visit("http://go-colly.org/")
+}` "go" "linenos=table" }}
       </div>
-    </div>
+	</div>
     <!--
     <div class="row">
       <div class="center aligned column">
@@ -36,6 +49,34 @@
     </div>
     -->
   </div>
+</div>
+<div class="ui three column center aligned divided relaxed stackable grid container padding">
+    <div class="row">
+        <div class="column">
+            <h2 class="ui icon header">
+                <i class="ui battery full icon image"></i>
+                    Batteries included
+            </h2>
+            <p>Colly comes with all the tools you need for scraping.</p>
+            <a href="{{ "docs/" | absURL }}" class="ui primary view-ui large basic button">Examples</a>
+        </div>
+        <div class="column">
+            <h2 class="ui icon header">
+                <i class="ui star icon image"></i>
+                Business ready
+            </h2>
+            <p>Free for commercial use.</p>
+            <a href="https://github.com/asciimoo/colly/blob/master/README.md" class="ui primary view-ui large basic button">License</a>
+        </div>
+        <div class="column">
+            <h2 class="ui icon header">
+                <i class="ui rocket icon image"></i>
+                Open Source
+            </h2>
+            <p>Development of Colly is community driven and public.</p>
+            <a href="https://github.com/asciimoo/colly" class="ui primary view-ui large basic button">Project</a>
+        </div>
+    </div>
 </div>
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 {{ end }}
