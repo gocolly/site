@@ -20,9 +20,15 @@ pygmentsCodeFences = true
   identifier = "docs"
 
 [[menu.main]]
+  name = "Services"
+  url = "/services/"
+  weight = 21
+  identifier = "services"
+
+[[menu.main]]
   name = "Datasets"
   url = "/datasets/"
-  weight = 20
+  weight = 30
   identifier = "datasets"
 
 
