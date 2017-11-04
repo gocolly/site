@@ -2,14 +2,22 @@
 <p></p>
 <div class="ui stackable grid container">
   <div class="row">
-    <div class="twelve wide column">
+    <div class="sixteen wide column">
       <h1>{{ .Params.title }}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="twelve wide column">
       {{ .Content }}
     </div>
-    <!--<div class="six wide column">
-      <h4>{{ .Params.date }}</h4>
-      </div>
-  </div>-->
+    <div class="four wide column">
+        <div class="ui card">
+            <div class="content">
+                <div class="header">{{ .Date.Format "2006.01.02" }}</div>
+                <div class="meta">@{{ .Params.author }}</div>
+            </div>
+        </div>
+	</div>
   </div>
   <div class="ui divider"></div>
 </div>
