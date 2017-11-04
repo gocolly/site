@@ -15,7 +15,7 @@ But how to collect data from websites and create scrapers which get the job done
 
 First, you need to specify what parts of sites contain relevant data. Selectors can be used to query different elements of a HTML page. The two most popular selector languages are [XPath](https://www.w3schools.com/xml/xpath_syntax.asp) and [CSS Selector](https://www.w3schools.com/cssref/css_selectors.asp). HTML source viewers help you come up with appropriate selectors. A simple HTML source viewer is available in browsers. Simply right click in the page and select "View page source" from the options.
 
-The DOM displayed in browser inspectors include the changes done by JavaScript files. So it usually differs from the actual response you need to parse.
+The DOM displayed in browser inspectors include the changes done by JavaScript. So it usually differs from the actual response you need to parse.
 
 {{<tip>}}Always use the source code view of a page.{{</tip>}}
 
@@ -62,6 +62,15 @@ For instance, you are scraping a web shop under the domain `https://shop.com/` a
 Furthermore, it is possible that multiple pages link to the same URL. There is no point in requesting it again as it has been visited previously. To eliminate duplicated requests, use a cache to store URLs which has been visited already. In smaller scraping jobs simple in-memory key value stores or lists can do the trick. If you are running your scraper for so long that visited pages might change, you can invalidate the contents of your cache.
 
 {{<tip>}}Cache responses.{{</tip>}}
+
+## Summary
+
+Scraping is a powerful technique when you are trying to retrieve and present information in a different format. Colly helps you along the way to get the data quickly and smoothly from any source.
+
+These are our tips and tricks of scraping. If you have further tips, do not hesitate to share it with us.
+
+Happy scraping!
+
 
 ## References
 
