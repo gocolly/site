@@ -1,0 +1,31 @@
+{{ define "main" }}
+{{ $currentPage := . }}
+<div class="ui ">
+  <div class="ui middle aligned grid container">
+    <div class="twelve wide column">
+      <div class="ui vertical stripe segment">
+        <div class="ui stackable grid container">
+          <div class="row">
+            <div class="sixteen wide column">
+              <h2>{{ .Params.title }}</h2>
+              <div class="ui divided items">
+                {{ range .Data.Pages }}
+                <div class="item">
+                  <div class="content">
+                    <div class="header">
+                        <a href="{{.Permalink}}">{{.Title}}</a>
+                    </div>
+                    <div class="meta">{{.Date.Format "2006-01-02"}} - {{ .Params.Author }}</div>
+                    <div class="description">{{ .Description }}</div>
+                  </div>
+                </div>
+                {{ end }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
