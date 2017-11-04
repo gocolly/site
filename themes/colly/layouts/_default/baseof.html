@@ -22,24 +22,27 @@
     <link href="{{ "css/semantic.min.css" | absURL }}" rel="stylesheet" type="text/css" />
 <style>
 html { font-size: 16px; }
-p { font-size: 18px; }
 body { display: flex; min-height: 100vh; flex-direction: column; }
-code { background: #F0F0F0; padding: 2px 4px; }
+p { font-size: 18px; }
+code { background: #F0F0F0; padding: 2px 4px; font-size: 16px !important; }
+pre { padding: 8px; overflow: auto !important; }
+table { border-collapse: collapse; }
+th { text-align: left; }
+td, th { border: 1px solid #888888; padding: 8px; }
 .content { flex: 1; }
 .padding { padding: 16px !important; }
 .highlight div { border-radius: 6px !important; }
 .bigtext { font-size: 2.5em; }
-pre { padding: 8px; overflow: auto !important; }
+.tip { padding: 0.5em 1em !important; }
+.tip p { font-size: 14px; }
 #menu { padding: 0 20px; }
 .landing { min-height: 300px; }
 .landing h2 { font-size: 1.6em !important; }
 .landing h1, .landing h2, .landing h3 { font-weight: 100 !important; }
 .masthead, .footer { background: linear-gradient(to right, #231333, #1f3c3d) !important; }
-table { border-collapse: collapse; }
-th { text-align: left; }
-td, th { border: 1px solid #888888; padding: 8px; }
 .computer, .tablet { padding: 0 !important; }
 .ui.vertical.navbar.menu { margin-top: -15px !important; width: 100%; display: none; }
+.ui.secondary { width: 100% !important; }
 </style>
   </head>
   <body>
