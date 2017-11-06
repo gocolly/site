@@ -1,5 +1,5 @@
 ---
-title: Colly Documentation
+title: Documentation
 linktitle: docs
 date: 2017-10-28
 ---

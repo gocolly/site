@@ -1,3 +1,3 @@
 ---
-title: "Colly Articles"
+title: Data scraping articles
 ---

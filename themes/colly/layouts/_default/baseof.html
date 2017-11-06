@@ -4,15 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-     {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
-    <title>{{ block "title" . }}{{ .Site.Title }} | {{ .Site.Params.description }}{{ end }}</title>
+    <title>{{ if eq  .Title  .Site.Title }}{{ .Site.Params.description }}{{ else }}{{ with .Title }}{{.}} | {{ end }}{{ .Site.Title }}{{ end }}</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
     <meta content="{{ "logo.png" | absURL }}" property="og:image" />
-    <meta content="{{ .Site.Params.Title }}" property="og:title" />
-    <meta content="{{ .Site.Params.Description }}" property="og:description" />
-    <meta name="description" content="{{ .Site.Params.Description }}">
+    <meta content="{{ if eq  .Title  .Site.Title }}{{ .Site.Params.description }}{{ else }}{{ with .Title }}{{.}} | {{ end }}{{ .Site.Title }}{{ end }}" property="og:title" />
+    <meta content="Scraping framework for extracting the data you need from websites, used for a wide range of applications, like data mining, data processing or archiving" property="og:description" />
+    <meta name="description" content="Scraping framework for extracting the data you need from websites, used for a wide range of applications, like data mining, data processing or archiving">
 
 
     {{ .Hugo.Generator }}

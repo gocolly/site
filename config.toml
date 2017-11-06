@@ -10,7 +10,7 @@ pygmentsCodeFences = true
 
 [params]
   title = "Colly"
-  description = "Fast and Elegant Scraping Framework for Gophers"
+  description = "Scraping Framework for Golang"
   github = "https://github.com/asciimoo/colly"
 
 [[menu.main]]
