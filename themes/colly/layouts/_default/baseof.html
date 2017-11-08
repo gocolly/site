@@ -27,15 +27,16 @@
 html { font-size: 16px; }
 body { display: flex; min-height: 100vh; flex-direction: column; }
 p, li { font-size: 18px; }
-pre code { background: transparent; font-size: 14px; }
-p > code, li > code { background: #F0F0F0; padding: 2px 4px; font-size: 16px; }
+pre > code { background: transparent; font-size: 14px; }
+p > code, li > code { background: #F0F0F0; padding: 2px 4px; font-size: 16px !important; }
 pre { padding: 8px; overflow: auto !important; }
 table { border-collapse: collapse; }
 th { text-align: left; }
 td, th { border: 1px solid #888888; padding: 8px; }
+.maincode * { font-size: 14px; }
+.highlight > div { border-radius: 6px !important; }
 .content { flex: 1; }
 .padding { padding: 16px !important; }
-.highlight div { border-radius: 6px !important; }
 .bigtext { font-size: 2.5em; }
 .tip { padding: 0.5em 1em !important; }
 .tip p { font-size: 14px; }
