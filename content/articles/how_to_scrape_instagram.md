@@ -11,7 +11,7 @@ Scraping can be tedious work especially if the target site isn't just a standard
 ## Information gathering
 
 
-First, if we view the source code of a profile page (e.g. https://instagram.com/instagram), we can see a bunch of JavaScript code inside the `body` tag instead of static HTML tags. Let's take a closer look at it. We can see that the first `<script>` is just a variable declaration where a huge JSON is assigned to a single variable (`window._sharedData`). This JSON can be easily extracted from the `<script>` tag by finding the first `{` character and getting the whole content after it:
+First, if we view the source code of a profile page (e.g. https://instagram.com/instagram), we can see a bunch of JavaScript code inside the `body` tag instead of static HTML tags. Let's take a closer look at it. We can see that the first `script` is just a variable declaration where a huge JSON is assigned to a single variable (`window._sharedData`). This JSON can be easily extracted from the `script` tag by finding the first `{` character and getting the whole content after it:
 
 ```go
 jsonData := scriptContent[strings.Index(scriptContent, "{") : len(scriptContent)-1]
@@ -51,7 +51,7 @@ As you can see it is a JSON object and the value of the `after` attribute is the
 
 The only unknown information in the next page URL is the `query_id` GET parameter. The HTML source code does not contain it, nor the cookies or response headers. After a little bit of digging it can be found in a static JS file included in the main page and seems it is a constant value.
 
-The format of the response is also JSON but the structure is different from what we've found on the main page. This JSON contains the same information as the previous, however we cannot use the same method to extract data due to structural differences.
+The format of the response is also JSON but the structure is different from what we've found on the main page. This JSON contains the same information as the previous one, however we cannot use the same method to extract data due to structural differences.
 
 ## Building the scraper
 
@@ -113,7 +113,7 @@ c.OnHTML("body > script:first-of-type", func(e *colly.HTMLElement) {
 
 ### Create and visit next page URLs
 
-The format of the next page URL is constant, so a format string can be declared which accepts the changing `id` and `after` parameters.
+The format of the next page URL is fixed, so a format string can be declared which accepts the changing `id` and `after` parameters.
 
 ```go
 const nextPageURLTemplate string = `https://www.instagram.com/graphql/query/?query_id=17888483320059182&variables={"id":"%s","first":12,"after":"%s"}`
@@ -133,7 +133,7 @@ c.OnResponse(func(r *colly.Response) {
         r.Save(outputDir + r.FileName())
         return
     }
-    // handle further reponse types...
+    // handle further response types...
 }
 ```
 
