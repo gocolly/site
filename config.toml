@@ -11,7 +11,7 @@ pygmentsCodeFences = true
 [params]
   title = "Colly"
   description = "Scraping Framework for Golang"
-  github = "https://github.com/asciimoo/colly"
+  github = "https://github.com/gocolly/colly"
 
 [[menu.main]]
   name = "Docs"
