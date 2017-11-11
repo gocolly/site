@@ -12,7 +12,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/asciimoo/colly"
+	"github.com/gocolly/colly"
 )
 
 func main() {

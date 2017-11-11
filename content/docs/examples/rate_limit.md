@@ -13,7 +13,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/asciimoo/colly"
+	"github.com/gocolly/colly"
 )
 
 func main() {

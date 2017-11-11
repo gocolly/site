@@ -15,5 +15,5 @@ Type following command on Terminal and hit enter to install Colly.
 
 
 ```shell
-go get -u github.com/asciimoo/colly/...
+go get -u github.com/gocolly/colly/...
 ```

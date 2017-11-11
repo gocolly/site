@@ -16,7 +16,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/asciimoo/colly"
+	"github.com/gocolly/colly"
 )
 
 func generateFormData() map[string][]byte {

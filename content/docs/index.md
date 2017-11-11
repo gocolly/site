@@ -12,4 +12,4 @@ Below you will find some of the most common and helpful pages from our documenta
  * [Getting started](/docs/introduction/start/)
  * [Basic scraper example](/docs/examples/basic/)
 
-Also, check out [GoDoc](https://godoc.org/github.com/asciimoo/colly) for API reference.
+Also, check out [GoDoc](https://godoc.org/github.com/gocolly/colly) for API reference.

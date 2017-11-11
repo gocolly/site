@@ -14,7 +14,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/asciimoo/colly"
+	"github.com/gocolly/colly"
 )
 
 func main() {
