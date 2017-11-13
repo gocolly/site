@@ -40,7 +40,7 @@ The next page of the user profile is retrieved by an AJAX call, so we have to us
 https://www.instagram.com/graphql/query/?query_id=17888483320059182&variables=%7B%22id%22%3A%2225025320%22%2C%22first%22%3A12%2C%22after%22%3A%22AQBiQhGRC6c6f-YOxdU0ApaAvotN4zI601ymkAtQ8SutdWz2n-bKFCkv51PMAoi9im3tNDTFLyhV969z8a6JnAkQMzHbYVwNI4Ke7jbk99nvFA%22%7D
 ```
 
-It seems like Instagram uses a (GraphQL)[https://en.wikipedia.org/wiki/GraphQL] API and the value of `variables` GET parameter is an URL encoded value. We can decode it with a single line of Python code:
+It seems like Instagram uses a [GraphQL](https://en.wikipedia.org/wiki/GraphQL) API and the value of `variables` GET parameter is an URL encoded value. We can decode it with a single line of Python code:
 
 ```
 $ python -c 'import urlparse;print(urlparse.parse_qs("variables=%7B%22id%22%3A%2225025320%22%2C%22first%22%3A12%2C%22after%22%3A%22AQBiQhGRC6c6f-YOxdU0ApaAvotN4zI601ymkAtQ8SutdWz2n-bKFCkv51PMAoi9im3tNDTFLyhV969z8a6JnAkQMzHbYVwNI4Ke7jbk99nvFA%22%7D")["variables"][0])'
