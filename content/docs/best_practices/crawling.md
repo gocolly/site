@@ -3,7 +3,7 @@ title: Crawler configuration
 categories: [crawling]
 menu:
   docs:
-    parent: "introduction"
+    parent: "best_practices"
     weight: 40
 ---
 
