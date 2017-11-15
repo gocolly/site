@@ -7,7 +7,7 @@ menu:
     weight: 30
 ---
 
-Sometimes it's enough to place some `log.Println()` function calls to your callbacks, but sometimes it isn't. Colly has built-in abilities for collector debug. A debugger interface and different kind of debugger implementations are also available.
+Sometimes it's enough to place some `log.Println()` function calls to your callbacks, but sometimes it isn't. Colly has built-in abilities for collector debug. A debugger interface and different kind of debugger implementations are available.
 
 ## Attach debugger to a collector
 
