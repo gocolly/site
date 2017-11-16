@@ -30,6 +30,6 @@ import "https://github.com/juju/persistent-cookiejar"
 
 j, err := cookiejar.New(&cookiejar.Options{Filename: "cookie.db"})
 if err == nil {
-    c.SetCookieJar()
+    c.SetCookieJar(j)
 }
 ```
