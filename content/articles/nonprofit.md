@@ -6,7 +6,7 @@ author: asciimoo
 ---
 
 We know the importance of nonprofit and charity organizations, so we're happy to announce that we provide free data collection to them as a volunteer service.
-We believe in helping charities and philantropic orgaizations all over the world bridge the gap between their mission and their audience.
+We believe in helping charities and philantropic organizations all over the world bridge the gap between their mission and their audience.
 
 Our team makes it easy for your organization to create impactful research papers, infographics, statistics that you can use online or in print by collecting data for you.
 
