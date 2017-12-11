@@ -7,7 +7,7 @@ menu:
     weight: 15
 ---
 
-Distributed scraping can be implemented different ways depending on what are the requirements of the scraping task. Most of the time it's enough to scale the network communication layer which can be easily achieved using proxies and Colly's proxy switchers.
+Distributed scraping can be implemented in different ways depending on what the requirements of the scraping task are. Most of the time it's enough to scale the network communication layer which can be easily achieved using proxies and Colly's proxy switchers.
 
 
 ## Proxy switchers
