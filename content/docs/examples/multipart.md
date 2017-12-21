@@ -59,7 +59,7 @@ func main() {
 	c.AllowURLRevisit = true
 	c.MaxDepth = 5
 
-	// On every a element which has href attribute call callback
+	// On every document
 	c.OnHTML("html", func(e *colly.HTMLElement) {
 		fmt.Println(e.Text)
 		time.Sleep(1 * time.Second)
