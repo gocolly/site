@@ -89,7 +89,7 @@ More details about cookies can be found [here](https://en.wikipedia.org/wiki/HTT
 
 ## Epilogue
 
-HTTP headers provide additional parameters to HTTP transactions. By sending the appropiate HTTP headers, one can access the response data in a different format. Or by sending cookies back to the server, sessions can be handled. Thus, making the scraper functioning.
+HTTP headers provide additional parameters to HTTP transactions. By sending the appropriate HTTP headers, one can access the response data in a different format. Or by sending cookies back to the server, sessions can be handled. Thus, making the scraper functioning.
 
 The above headers are handled automatically by browsers, that's why it is important to know how and when to use them in scraping.
 
