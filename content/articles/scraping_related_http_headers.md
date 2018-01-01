@@ -13,11 +13,11 @@ They allow the client and the server to pass additional information with the req
 
 ![HTTP Header structure](/http_header_struct.jpg)
 
-A detailed list of HTTP headers can be found [here](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)
+A detailed list of HTTP headers can be found [here](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields).
 
 **IMPORTANT: HTTP headers are optional and can contain arbitrary data.**
 
-{{<tip>}}Always validate every HTTP header value before using{{</tip>}}
+{{<tip>}}Always validate every HTTP header value before using.{{</tip>}}
 
 
 ## Request headers
@@ -32,7 +32,7 @@ Cookies are set by the server using `Set-Cookie`. The requests send back them us
 
 Sites often use cookies to implement authentication.
 
-{{<tip>}}Cookies of every request in the browser can be checked using the browser's network inspector (hotkey: F12){{</tip>}}
+{{<tip>}}Cookies of every request in the browser can be checked using the browser's network inspector. (hotkey: F12){{</tip>}}
 
 
 ### `User-Agent`
@@ -45,7 +45,7 @@ Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0
 Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0
 ```
 
-{{<tip>}}Change `User-Agent` strings frequently to reduce the chance of getting blocked{{</tip>}}
+{{<tip>}}Change `User-Agent` strings frequently to reduce the chance of getting blocked.{{</tip>}}
 
 
 ### `Host`
@@ -82,7 +82,7 @@ The `Content-Length` response header field indicates the size of the response bo
 
 ### `Set-Cookie`
 
-The `Set-Cookie` HTTP response header is used to send cookies from the server to the client. When receiving an HTTP request, a server can send a Set-Cookie header with the response. The cookie is usually sent with requests made to the same server inside a Cookie HTTP header. An expiration date or duration can be specified, after which the cookie is no longer sent. Additionally, restrictions to a specific domain and path can be set, limiting where the cookie is sent.
+The `Set-Cookie` HTTP response header is used to send cookies from the server to the client. When receiving an HTTP request, a server can send a `Set-Cookie` header with the response. The cookie is usually sent with requests made to the same server inside a Cookie HTTP header. An expiration date or duration can be specified, after which the cookie is no longer sent. Additionally, restrictions to a specific domain and path can be set, limiting where the cookie is sent.
 
 More details about cookies can be found [here](https://en.wikipedia.org/wiki/HTTP_cookie).
 
