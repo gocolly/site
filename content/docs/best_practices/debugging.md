@@ -21,8 +21,7 @@ import (
 )
 
 func main() {
-	c := colly.NewCollector()
-	c.SetDebugger(&debug.LogDebugger{})
+    c := colly.NewCollector(colly.Debugger(&debug.LogDebugger{}))
     // [..]
 }
 ```
