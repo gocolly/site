@@ -19,7 +19,7 @@ import (
 
 func main() {
 	// Instantiate default collector
-	c := colly.NewCollector()
+	c := colly.NewCollector(colly.AllowURLRevisit())
 
 	// Rotate two socks5 proxies
 	rp, err := proxy.RoundRobinProxySwitcher("socks5://127.0.0.1:1337", "socks5://127.0.0.1:1338")
@@ -34,7 +34,6 @@ func main() {
 	})
 
 	// Fetch httpbin.org/ip five times
-	c.AllowURLRevisit = true
 	for i := 0; i < 5; i++ {
 		c.Visit("https://httpbin.org/ip")
 	}

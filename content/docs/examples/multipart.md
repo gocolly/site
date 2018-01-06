@@ -20,7 +20,7 @@ import (
 )
 
 func generateFormData() map[string][]byte {
-	f, _ := os.Open("asciimoo.jpg")
+	f, _ := os.Open("gocolly.jpg")
 	defer f.Close()
 
 	imgData, _ := ioutil.ReadAll(f)
@@ -55,11 +55,9 @@ func main() {
 	// Start a single route http server to post an image to.
 	setupServer()
 
-	c := colly.NewCollector()
-	c.AllowURLRevisit = true
-	c.MaxDepth = 5
+	c := colly.NewCollector(colly.AllowURLRevisit(), colly.MaxDepth(5))
 
-	// On every document
+	// On every a element which has href attribute call callback
 	c.OnHTML("html", func(e *colly.HTMLElement) {
 		fmt.Println(e.Text)
 		time.Sleep(1 * time.Second)
@@ -68,7 +66,7 @@ func main() {
 
 	// Before making a request print "Visiting ..."
 	c.OnRequest(func(r *colly.Request) {
-		fmt.Println("Posting asciimoo.jpg to", r.URL.String())
+		fmt.Println("Posting gocolly.jpg to", r.URL.String())
 	})
 
 	// Start scraping

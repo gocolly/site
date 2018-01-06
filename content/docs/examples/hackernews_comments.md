@@ -12,7 +12,6 @@ package main
 import (
 	"encoding/json"
 	"flag"
-	"fmt"
 	"log"
 	"os"
 	"strconv"
@@ -74,13 +73,10 @@ func main() {
 
 	c.Visit("https://news.ycombinator.com/item?id=" + itemID)
 
-	// Convert results to JSON data if the scraping job has finished
-	jsonData, err := json.MarshalIndent(comments, "", "  ")
-	if err != nil {
-		panic(err)
-	}
+	enc := json.NewEncoder(os.Stdout)
+	enc.SetIndent("", "  ")
 
-	// Dump json to the standard output (can be redirected to a file)
-	fmt.Println(string(jsonData))
+	// Dump json to the standard output
+	enc.Encode(comments)
 }
 ```
