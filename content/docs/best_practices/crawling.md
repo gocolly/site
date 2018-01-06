@@ -10,13 +10,9 @@ menu:
 Colly's default configuration is optimized for scraping smaller number of sites in one job. This setup isn't the best if you'd like to crawl millions of sites. Here are some tweaks:
 
 ```go
-c := c.NewCollector()
-
 // Reduce maximum response body size to 1M
-c.MaxBodySize := 1024 * 1024
-
 // Don't track visited urls automatically
-c.AllowURLRevisit = true
+c := c.NewCollector(colly.MaxBodySize(1024 * 1024), colly.AllowURLRevisit())
 
 // Turn off cookie handling
 c.DisableCookies()

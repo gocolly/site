@@ -11,7 +11,7 @@ It is advised to use multiple collectors for one scraping jobs if the task is co
 
 Colly has some built-in methods to support the usage of multiple collectors.
 
-{{<tip>}}Use <code>collector.Id</code> in debugging to distinguish different collectors{{</tip>}}
+{{<tip>}}Use <code>collector.ID</code> in debugging to distinguish different collectors{{</tip>}}
 
 
 ## Cloning collectors
@@ -19,9 +19,10 @@ Colly has some built-in methods to support the usage of multiple collectors.
 You can use the `Clone()` method of a collector if collectors have similar configuration. `Clone()` duplicates a collector with identical configuration but without the attached callbacks.
 
 ```go
-c := colly.NewCollector()
-c.UserAgent = "myUserAgent"
-c.AllowedDomains = []string{"foo.com", "bar.com"}
+c := colly.NewCollector(
+	colly.UserAgent("myUserAgent"),
+	colly.AllowedDomains("foo.com", "bar.com"),
+)
 // Custom User-Agent and allowed domains are cloned to c2
 c2 := c.Clone()
 ```
