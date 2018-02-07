@@ -59,6 +59,10 @@ c.OnHTML("tr td:nth-of-type(1)", func(e *colly.HTMLElement) {
     fmt.Println("First column of a table row:", e.Text)
 })
 
+c.OnXML("//h1", func(e *colly.XMLElement) {
+    fmt.Println(e.Text)
+})
+
 c.OnScraped(func(r *colly.Response) {
     fmt.Println("Finished", r.URL)
 })
@@ -83,6 +87,10 @@ Called after response received
 
 Called right after `OnResponse` if the received content is HTML
 
-#### 5. `OnScraped`
+#### 5. `OnXML`
 
-Called after `OnHTML` callbacks
+Called right after `OnHTML` if the received content is HTML or XML
+
+#### 6. `OnScraped`
+
+Called after `OnXML` callbacks
