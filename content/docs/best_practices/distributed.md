@@ -61,6 +61,12 @@ c.SetProxyFunc(randomProxySwitcher)
 
 ## Distributed scrapers
 
-To manage independent and distributed scrapers the best you can do is wrapping them in a server. Server can be any kind of service like HTTP, TCP servers or Google App Engine.
+To manage independent and distributed scrapers the best you can do is wrapping the scraper in a server. Server can be any kind of service like HTTP, TCP servers or Google App Engine. Use custom [docs/best_practices/storage](storage) to achieve centralized and persistent cookie and visited url handling.
 
 {{<tip>}}Colly has built-in Google App Engine support. Don't forget to call <code>Collector.Appengine(*http.Request)</code> if you use Colly from App Engine standard environment.{{</tip>}}
+
+### Distributed storage
+
+Visited URL and cookie data are stored in-memory by default. This is handy for short living scraper jobs, but it can be a serious limitation when dealing with large scale or long running crawling jobs.
+
+Colly has the ability to replace the default in-memory storage with any storage backend which implements [colly/storage.Storage](https://godoc.org/github.com/gocolly/colly/storage#Storage) interface. Check out [docs/best_practices/storage](existing storages).
