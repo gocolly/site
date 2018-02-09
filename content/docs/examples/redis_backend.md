@@ -29,7 +29,7 @@ func main() {
 		Address:  "127.0.0.1:6379",
 		Password: "",
 		DB:       0,
-		Prefix:   "httpbin_test",
+		Prefix:   "job01",
 	}
 
 	defer storage.Close()
