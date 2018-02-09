@@ -69,4 +69,4 @@ To manage independent and distributed scrapers the best you can do is wrapping t
 
 Visited URL and cookie data are stored in-memory by default. This is handy for short living scraper jobs, but it can be a serious limitation when dealing with large scale or long running crawling jobs.
 
-Colly has the ability to replace the default in-memory storage with any storage backend which implements [colly/storage.Storage](https://godoc.org/github.com/gocolly/colly/storage#Storage) interface. Check out [docs/best_practices/storage](existing storages).
+Colly has the ability to replace the default in-memory storage with any storage backend which implements [colly/storage.Storage](https://godoc.org/github.com/gocolly/colly/storage#Storage) interface. Check out [existing storages](/docs/best_practices/storage).
