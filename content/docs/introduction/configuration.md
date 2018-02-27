@@ -55,6 +55,26 @@ c.OnRequest(func(r *colly.Request) {
 })
 ```
 
+## Configuration via environment variables
+
+Collector's default configuration can be changed via environment variables. This allows us to fine-tune collectors without recompile.
+Environment parsing is the last step of the collector initialization, so every configuration change after the initialization overrides the config parsed from environment.
+
+### Environment config variables
+
+
+ - **`ALLOWED_DOMAINS`** (comma separated list of domains)
+ - **`CACHE_DIR`** (string)
+ - **`DETECT_CHARSET`** (y/n)
+ - **`DISABLE_COOKIES`** (y/n)
+ - **`DISALLOWED_DOMAINS`** (comma separated list of domains)
+ - **`IGNORE_ROBOTSTXT`** (y/n)
+ - **`MAX_BODY_SIZE`** (int)
+ - **`MAX_DEPTH`** (int - 0 means infinite)
+ - **`PARSE_HTTP_ERROR_RESPONSE`** (y/n)
+ - **`USER_AGENT`** (string)
+
+
 ## HTTP configuration
 
 Colly uses Golang's default [http client](https://godoc.org/net/http) as the networking layer. HTTP options can be tweaked by changing the default [HTTP roundtripper](https://godoc.org/net/http#RoundTripper).
