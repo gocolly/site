@@ -27,6 +27,12 @@ c2 := colly.NewCollector(
 	colly.AllowURLRevisit(),
 )
 ```
+or
+```go
+c2 := colly.NewCollector()
+c2.UserAgent = "xy"
+c2.AllowURLRevisit = true
+```
 
 Configuration can be changed at any point of a scraping job by overwriting the attributes of the collectors.
 
