@@ -32,12 +32,12 @@ func main() {
 		Prefix:   "job01",
 	}
 
-	defer storage.Close()
-
 	err := c.SetStorage(storage)
 	if err != nil {
 		panic(err)
 	}
+
+	defer storage.Client.Close()
 
 	c.OnResponse(func(r *colly.Response) {
 		log.Println("Cookies:", c.Cookies(r.Request.URL.String()))
