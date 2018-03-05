@@ -48,7 +48,7 @@ c.OnError(func(_ *colly.Response, err error) {
 })
 
 c.OnResponse(func(r *colly.Response) {
-    fmt.Println("Visited", r.URL)
+    fmt.Println("Visited", r.Request.URL)
 })
 
 c.OnHTML("a[href]", func(e *colly.HTMLElement) {
@@ -64,7 +64,7 @@ c.OnXML("//h1", func(e *colly.XMLElement) {
 })
 
 c.OnScraped(func(r *colly.Response) {
-    fmt.Println("Finished", r.URL)
+    fmt.Println("Finished", r.Request.URL)
 })
 ```
 
