@@ -51,7 +51,7 @@ func RandomString() string {
 c := colly.NewCollector()
 
 c.OnRequest(func(r *colly.Request) {
-	r.UserAgent = RandomString()
+	r.Headers.Set("User-Agent", RandomString())
 })
 ```
 
