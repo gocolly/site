@@ -12,7 +12,7 @@ Extensions are small helper utilities shipped with Colly. List of plugins is ava
 
 ## Usage
 
-The following example enables the random User-Agent switcher and the Referrer setter plugin and visits httpbin.org twice.
+The following example enables the random User-Agent switcher and the Referrer setter extension and visits httpbin.org twice.
 
 ```go
 import (
