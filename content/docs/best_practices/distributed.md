@@ -61,7 +61,7 @@ c.SetProxyFunc(randomProxySwitcher)
 
 ## Distributed scrapers
 
-To manage independent and distributed scrapers the best you can do is wrapping the scraper in a server. Server can be any kind of service like HTTP, TCP servers or Google App Engine. Use custom [docs/best_practices/storage](storage) to achieve centralized and persistent cookie and visited url handling.
+To manage independent and distributed scrapers the best you can do is wrapping the scraper in a server. Server can be any kind of service like HTTP, TCP servers or Google App Engine. Use custom [storage](/docs/best_practices/storage) to achieve centralized and persistent cookie and visited url handling.
 
 {{<tip>}}Colly has built-in Google App Engine support. Don't forget to call <code>Collector.Appengine(*http.Request)</code> if you use Colly from App Engine standard environment.{{</tip>}}
 
