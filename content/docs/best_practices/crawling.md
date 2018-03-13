@@ -9,23 +9,13 @@ menu:
 
 Colly's default configuration is optimized for scraping smaller number of sites in one job. This setup isn't the best if you'd like to crawl millions of sites. Here are some tweaks:
 
-```go
-// Reduce maximum response body size to 1M
-// Don't track visited urls automatically
-c := c.NewCollector(colly.MaxBodySize(1024 * 1024), colly.AllowURLRevisit())
 
-// Turn off cookie handling
-c.DisableCookies()
-```
+## Use persistent storage backend
 
-If you need cookies anyway, a persistent cookie storage can be used (e.g. https://github.com/juju/persistent-cookiejar) :
+By default Colly stores cookies and visited URLs in memory. You can replace the built-in in-memory storage backend with any custom backend. See more details [here](https://godoc.org/github.com/gocolly/colly/storage).
 
-```go
-// Don't forget to import the cookie jar
-import "https://github.com/juju/persistent-cookiejar"
 
-j, err := cookiejar.New(&cookiejar.Options{Filename: "cookie.db"})
-if err == nil {
-    c.SetCookieJar(j)
-}
-```
+## Use async for long running jobs with recursive calls
+
+By default Colly blocks while the request isn't finished, so recursively calling `Collector.Visit` from callbacks produces constantly growing stack. With `Collector.Async = true` this can be avoided.
+(Don't forget to use `c.Wait()` with async.)
