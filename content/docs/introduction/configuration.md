@@ -77,12 +77,12 @@ Environment parsing is the last step of the collector initialization, so every c
 
 ## HTTP configuration
 
-Colly uses Golang's default [http client](https://godoc.org/net/http) as the networking layer. HTTP options can be tweaked by changing the default [HTTP roundtripper](https://godoc.org/net/http#RoundTripper).
+Colly uses Golang's default [http client](https://godoc.org/net/http) as networking layer. HTTP options can be tweaked by changing the default [HTTP roundtripper](https://godoc.org/net/http#RoundTripper).
 
 ```go
 c := colly.NewCollector()
 c.WithTransport(&http.Transport{
-	Proxy: ProxyFromEnvironment,
+	Proxy: http.ProxyFromEnvironment,
 	DialContext: (&net.Dialer{
 		Timeout:   30 * time.Second,
 		KeepAlive: 30 * time.Second,
