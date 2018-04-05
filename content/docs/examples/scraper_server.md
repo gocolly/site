@@ -65,7 +65,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	// example usage: curl -s 'http://127.0.01:7171/?url=http://go-colly.org/'
+	// example usage: curl -s 'http://127.0.0.1:7171/?url=http://go-colly.org/'
 	addr := ":7171"
 
 	http.HandleFunc("/", handler)
