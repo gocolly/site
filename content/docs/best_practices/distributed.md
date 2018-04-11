@@ -9,7 +9,6 @@ menu:
 
 Distributed scraping can be implemented in different ways depending on what the requirements of the scraping task are. Most of the time it's enough to scale the network communication layer which can be easily achieved using proxies and Colly's proxy switchers.
 
-
 ## Proxy switchers
 
 Using proxy switchers scraping still remains centralized while the HTTP requests are distributed among multiple proxies. Colly supports proxy switching via its' `SetProxyFunc()` member. Any custom function can be passed to `SetProxyFunc()` with the signature of `func(*http.Request) (*url.URL, error)`.
@@ -64,6 +63,8 @@ c.SetProxyFunc(randomProxySwitcher)
 To manage independent and distributed scrapers the best you can do is wrapping the scraper in a server. Server can be any kind of service like HTTP, TCP servers or Google App Engine. Use custom [storage](/docs/best_practices/storage) to achieve centralized and persistent cookie and visited url handling.
 
 {{<tip>}}Colly has built-in Google App Engine support. Don't forget to call <code>Collector.Appengine(*http.Request)</code> if you use Colly from App Engine standard environment.{{</tip>}}
+
+An example implementation can be found [here](/docs/examples/server_scraper).
 
 ### Distributed storage
 
