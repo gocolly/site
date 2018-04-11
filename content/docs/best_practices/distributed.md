@@ -64,7 +64,7 @@ To manage independent and distributed scrapers the best you can do is wrapping t
 
 {{<tip>}}Colly has built-in Google App Engine support. Don't forget to call <code>Collector.Appengine(*http.Request)</code> if you use Colly from App Engine standard environment.{{</tip>}}
 
-An example implementation can be found [here](/docs/examples/server_scraper).
+An example implementation can be found [here](/docs/examples/scraper_server).
 
 ### Distributed storage
 
