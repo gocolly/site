@@ -19,3 +19,6 @@ The default backend of Colly. Use [collector.SetStorage()](https://godoc.org/git
 ### [Redis backend](https://github.com/gocolly/redisstorage)
 
 See [redis example](/docs/examples/redis_backend) for details.
+
+
+### [SQLite3 backend](https://github.com/velebak/colly-sqlite3-storage)
