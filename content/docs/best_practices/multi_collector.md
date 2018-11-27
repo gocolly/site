@@ -38,5 +38,5 @@ Example of sharing context:
 c.OnResponse(func(r *colly.Response) {
 	r.Ctx.Put(r.Headers.Get("Custom-Header"))
 	c2.Request("GET", "https://foo.com/", nil, r.Ctx, nil)
-}
+})
 ```
