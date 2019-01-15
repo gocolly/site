@@ -22,3 +22,5 @@ See [redis example](/docs/examples/redis_backend) for details.
 
 
 ### [SQLite3 backend](https://github.com/velebak/colly-sqlite3-storage)
+
+### [MongoDB backend](https://github.com/zolamk/colly-mongo-storage)
