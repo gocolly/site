@@ -27,7 +27,7 @@ func main() {
     visited := false
 
     extensions.RandomUserAgent(c)
-    extensions.Referrer(c)
+    extensions.Referer(c)
 
     c.OnResponse(func(r *colly.Response) {
         log.Println(string(r.Body))
