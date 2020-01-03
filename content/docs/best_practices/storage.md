@@ -15,11 +15,11 @@ Colly has an in-memory storage backend to store cookies and visited URLs, but it
 
 The default backend of Colly. Use [collector.SetStorage()](https://godoc.org/github.com/gocolly/colly#Collector.SetStorage) to override.
 
-
 ### [Redis backend](https://github.com/gocolly/redisstorage)
 
 See [redis example](/docs/examples/redis_backend) for details.
 
+### [boltdb backend](https://github.com/earlzo/colly-bolt-storage)
 
 ### [SQLite3 backend](https://github.com/velebak/colly-sqlite3-storage)
 
