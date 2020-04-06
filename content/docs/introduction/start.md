@@ -83,7 +83,7 @@ Called before a request
 
 Called if error occured during the request
 
-#### 3. `OnResponseHeaders
+#### 3. `OnResponseHeaders`
 
 Called after response headers received
 
