@@ -47,6 +47,10 @@ c.OnError(func(_ *colly.Response, err error) {
     log.Println("Something went wrong:", err)
 })
 
+c.OnResponseHeaders(func(r *colly.Response) {
+    fmt.Println("Visited", r.Request.URL)
+})
+
 c.OnResponse(func(r *colly.Response) {
     fmt.Println("Visited", r.Request.URL)
 })
@@ -79,18 +83,22 @@ Called before a request
 
 Called if error occured during the request
 
-#### 3. `OnResponse`
+#### 3. `OnResponseHeaders
+
+Called after response headers received
+
+#### 4. `OnResponse`
 
 Called after response received
 
-#### 4. `OnHTML`
+#### 5. `OnHTML`
 
 Called right after `OnResponse` if the received content is HTML
 
-#### 5. `OnXML`
+#### 6. `OnXML`
 
 Called right after `OnHTML` if the received content is HTML or XML
 
-#### 6. `OnScraped`
+#### 7. `OnScraped`
 
 Called after `OnXML` callbacks
