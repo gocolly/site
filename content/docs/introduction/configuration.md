@@ -63,16 +63,17 @@ Environment parsing is the last step of the collector initialization, so every c
 ### Environment config variables
 
 
- - **`ALLOWED_DOMAINS`** (comma separated list of domains)
- - **`CACHE_DIR`** (string)
- - **`DETECT_CHARSET`** (y/n)
- - **`DISABLE_COOKIES`** (y/n)
- - **`DISALLOWED_DOMAINS`** (comma separated list of domains)
- - **`IGNORE_ROBOTSTXT`** (y/n)
- - **`MAX_BODY_SIZE`** (int)
- - **`MAX_DEPTH`** (int - 0 means infinite)
- - **`PARSE_HTTP_ERROR_RESPONSE`** (y/n)
- - **`USER_AGENT`** (string)
+ - **`COLLY_ALLOWED_DOMAINS`** (comma separated list of domains)
+ - **`COLLY_CACHE_DIR`** (string)
+ - **`COLLY_DETECT_CHARSET`** (y/n)
+ - **`COLLY_DISABLE_COOKIES`** (y/n)
+ - **`COLLY_DISALLOWED_DOMAINS`** (comma separated list of domains)
+ - **`COLLY_IGNORE_ROBOTSTXT`** (y/n)
+ - **`COLLY_FOLLOW_REDIRECTS`** (y/n)
+ - **`COLLY_MAX_BODY_SIZE`** (int)
+ - **`COLLY_MAX_DEPTH`** (int - 0 means infinite)
+ - **`COLLY_PARSE_HTTP_ERROR_RESPONSE`** (y/n)
+ - **`COLLY_USER_AGENT`** (string)
 
 
 ## HTTP configuration
