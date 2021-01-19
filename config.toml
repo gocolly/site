@@ -1,4 +1,4 @@
-baseURL = "http://go-colly.org/"
+baseURL = "https://go-colly.org/"
 languageCode = "en-us"
 title = "Colly"
 theme = "colly"
