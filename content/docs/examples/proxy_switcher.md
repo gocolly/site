@@ -14,7 +14,7 @@ import (
 	"log"
 
 	"github.com/gocolly/colly/v2"
-	"github.com/gocolly/colly/proxy"
+	"github.com/gocolly/colly/v2/proxy"
 )
 
 func main() {

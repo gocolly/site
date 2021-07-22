@@ -13,7 +13,7 @@ import (
 	"log"
 
 	"github.com/gocolly/colly/v2"
-	"github.com/gocolly/colly/queue"
+	"github.com/gocolly/colly/v2/queue"
 	"github.com/gocolly/redisstorage"
 )
 
