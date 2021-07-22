@@ -7,13 +7,13 @@ menu:
     weight: 25
 ---
 
-Colly has an in-memory storage backend to store cookies and visited URLs, but it can be overwritten by any custom storage backend which implements [colly/storage.Storage](https://godoc.org/github.com/gocolly/colly/storage#Storage).
+Colly has an in-memory storage backend to store cookies and visited URLs, but it can be overwritten by any custom storage backend which implements [colly/v2/storage.Storage](https://godoc.org/github.com/gocolly/colly/v2/storage#Storage).
 
 ## Existing Storage Backends
 
-### [In-Memory Backend](https://godoc.org/github.com/gocolly/colly/storage#InMemoryStorage)
+### [In-Memory Backend](https://godoc.org/github.com/gocolly/colly/v2/storage#InMemoryStorage)
 
-The default backend of Colly. Use [collector.SetStorage()](https://godoc.org/github.com/gocolly/colly#Collector.SetStorage) to override.
+The default backend of Colly. Use [collector.SetStorage()](https://godoc.org/github.com/gocolly/colly/v2#Collector.SetStorage) to override.
 
 ### [Redis backend](https://github.com/gocolly/redisstorage)
 

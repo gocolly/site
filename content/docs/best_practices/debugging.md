@@ -11,13 +11,13 @@ Sometimes it's enough to place some `log.Println()` function calls to your callb
 
 ## Attach debugger to a collector
 
-Attaching a basic logging debugger requires the `debug` (`github.com/gocolly/colly/debug`) package from Colly's repo.
+Attaching a basic logging debugger requires the `debug` (`github.com/gocolly/colly/v2/debug`) package from Colly's repo.
 
 ```go
 
 import (
-	"github.com/gocolly/colly"
-	"github.com/gocolly/colly/debug"
+	"github.com/gocolly/colly/v2"
+	"github.com/gocolly/colly/v2/debug"
 )
 
 func main() {
@@ -28,4 +28,4 @@ func main() {
 
 ## Implement a custom debugger
 
-You can create any kind of custom debugger by implementing the [debug.Debugger](https://godoc.org/github.com/gocolly/colly/debug#Debugger) interface. A good example is [LogDebugger](https://github.com/gocolly/colly/blob/master/debug/logdebugger.go).
+You can create any kind of custom debugger by implementing the [debug.Debugger](https://godoc.org/github.com/gocolly/colly/v2/debug#Debugger) interface. A good example is [LogDebugger](https://github.com/gocolly/colly/blob/master/debug/logdebugger.go).

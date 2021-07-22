@@ -19,7 +19,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/gocolly/colly"
+	"github.com/gocolly/colly/v2"
 )
 
 // found in https://www.instagram.com/static/bundles/en_US_Commons.js/68e7390c5938.js
