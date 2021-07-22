@@ -12,7 +12,7 @@ Colly is a highly customizable scraping framework. It has sane defaults and prov
 
 ## Collector configuration
 
-Full list of collector attributes can be found [here](https://godoc.org/github.com/gocolly/colly#Collector).
+Full list of collector attributes can be found [here](https://godoc.org/github.com/gocolly/colly/v2#Collector).
 The recommended way to initialize a collector is using `colly.NewCollector(options...)`.
 
 Create a collector with default settings:

@@ -23,8 +23,8 @@ Colly has a built-in proxy switcher which rotates a list of proxies on every req
 package main
 
 import (
-	"github.com/gocolly/colly"
-	"github.com/gocolly/colly/proxy"
+	"github.com/gocolly/colly/v2"
+	"github.com/gocolly/colly/v2/proxy"
 )
 
 func main() {
