@@ -14,7 +14,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/gocolly/colly"
+	"github.com/gocolly/colly/v2"
 )
 
 type pageInfo struct {

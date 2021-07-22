@@ -13,7 +13,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/gocolly/colly"
+	"github.com/gocolly/colly/v2"
 	"github.com/gocolly/colly/debug"
 )
 

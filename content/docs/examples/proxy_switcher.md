@@ -13,7 +13,7 @@ import (
 	"bytes"
 	"log"
 
-	"github.com/gocolly/colly"
+	"github.com/gocolly/colly/v2"
 	"github.com/gocolly/colly/proxy"
 )
 
