@@ -26,3 +26,5 @@ See [redis example](/docs/examples/redis_backend) for details.
 ### [MongoDB backend](https://github.com/zolamk/colly-mongo-storage)
 
 ### [PostgreSQL backend](https://github.com/zolamk/colly-postgres-storage)
+
+### [Neo4j backend](https://github.com/konsalex/colly-neo4j-storage)
