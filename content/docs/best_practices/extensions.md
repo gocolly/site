@@ -7,7 +7,7 @@ menu:
     weight: 50
 ---
 
-Extensions are small helper utilities shipped with Colly. List of plugins is available [here](https://godoc.org/github.com/gocolly/colly/extensions).
+Extensions are small helper utilities shipped with Colly. List of plugins is available [here](https://godoc.org/github.com/gocolly/colly/v2/extensions).
 
 
 ## Usage
@@ -18,8 +18,8 @@ The following example enables the random User-Agent switcher and the Referrer se
 import (
     "log"
 
-    "github.com/gocolly/colly"
-    "github.com/gocolly/colly/extensions"
+    "github.com/gocolly/colly/v2"
+    "github.com/gocolly/colly/v2/extensions"
 )
 
 func main() {

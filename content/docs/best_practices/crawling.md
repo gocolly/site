@@ -12,7 +12,7 @@ Colly's default configuration is optimized for scraping smaller number of sites 
 
 ## Use persistent storage backend
 
-By default Colly stores cookies and visited URLs in memory. You can replace the built-in in-memory storage backend with any custom backend. See more details [here](https://godoc.org/github.com/gocolly/colly/storage).
+By default Colly stores cookies and visited URLs in memory. You can replace the built-in in-memory storage backend with any custom backend. See more details [here](https://godoc.org/github.com/gocolly/colly/v2/storage).
 
 
 ## Use async for long running jobs with recursive calls

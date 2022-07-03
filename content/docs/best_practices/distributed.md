@@ -23,8 +23,8 @@ Colly has a built-in proxy switcher which rotates a list of proxies on every req
 package main
 
 import (
-	"github.com/gocolly/colly"
-	"github.com/gocolly/colly/proxy"
+	"github.com/gocolly/colly/v2"
+	"github.com/gocolly/colly/v2/proxy"
 )
 
 func main() {
@@ -70,4 +70,4 @@ An example implementation can be found [here](/docs/examples/scraper_server).
 
 Visited URL and cookie data are stored in-memory by default. This is handy for short living scraper jobs, but it can be a serious limitation when dealing with large scale or long running crawling jobs.
 
-Colly has the ability to replace the default in-memory storage with any storage backend which implements [colly/storage.Storage](https://godoc.org/github.com/gocolly/colly/storage#Storage) interface. Check out [existing storages](/docs/best_practices/storage).
+Colly has the ability to replace the default in-memory storage with any storage backend which implements [colly/storage.Storage](https://godoc.org/github.com/gocolly/colly/v2/storage#Storage) interface. Check out [existing storages](/docs/best_practices/storage).
