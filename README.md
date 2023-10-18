@@ -1,6 +1,6 @@
 # Colly Documentation
 
-This repo contains the source of http://go-colly.org/
+This repo contains the source of https://go-colly.org/
 
 
 ## Dependencies
